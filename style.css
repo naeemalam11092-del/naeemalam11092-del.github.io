@@ -1049,3 +1049,26 @@ header {
         text-align: center;
     }
 }
+
+/* --- Video Popup Button Styles --- */
+.btn-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.btn-group .cta-btn {
+    flex: 1;
+    padding: 12px 5px !important;
+    font-size: 0.95rem !important;
+}
+.watch-video-btn {
+    background-color: #E63946 !important;
+    border: none;
+    cursor: pointer;
+    display: none; /* By default hidden */
+    box-shadow: 0 10px 30px rgba(230, 57, 70, 0.3) !important;
+}
+.watch-video-btn:hover {
+    background-color: #D62828 !important;
+    box-shadow: 0 15px 40px rgba(230, 57, 70, 0.5) !important;
+}
