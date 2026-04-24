@@ -26,6 +26,7 @@ body {
     line-height: 1.6;
     background-color: var(--color-white);
     color: var(--color-dark);
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, .logo {
@@ -244,6 +245,201 @@ header {
 @media (max-width: 1100px) {
     .feature-cards .card {
         width: calc(50% - 10px) !important;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE & MOBILE FRIENDLY FIXES (320px to 768px)
+   ========================================================= */
+
+/* Header Base Styles for Desktop & Mobile */
+.site-header {
+    background: #1A4D8F !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 10px 24px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+.hamburger {
+    display: none;
+    color: var(--color-white);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* CRITICAL MOBILE OVERRIDES */
+@media (max-width: 768px) {
+    /* 1. Mobile Header + Navbar */
+    .site-header {
+        height: 70px;
+        padding: 0 !important;
+    }
+    .header-container {
+        padding: 10px 15px !important;
+        height: 100%;
+    }
+    .logo-box {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .logo-text {
+        font-size: 20px !important;
+    }
+    .hamburger {
+        display: block;
+    }
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #1A4D8F;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        z-index: 998;
+        align-items: flex-start;
+    }
+    .nav-menu.active {
+        max-height: 500px;
+        padding: 10px 20px 20px 20px;
+    }
+    .nav-menu a, .dropdown .dropbtn {
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        margin: 0 !important;
+    }
+    .dropdown {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+    }
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        background: rgba(0,0,0,0.2);
+        margin-top: 0;
+    }
+    .header-cta {
+        width: 100%;
+        justify-content: center;
+        margin-left: 0 !important;
+        margin-top: 15px;
+    }
+
+    /* 2. Hero Section */
+    .hero {
+        padding-top: 90px !important;
+        min-height: 450px !important;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Verified-property/images/rumi-gate.jpg') !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+    .hero h1 {
+        font-size: 28px !important;
+    }
+    .hero p, .hero-subtext {
+        font-size: 16px !important;
+    }
+    .hero .cta-btn {
+        width: 90% !important;
+        margin: 0 auto !important;
+        justify-content: center !important;
+    }
+
+    /* 3. General Responsive Rules */
+    section, .inner-page {
+        padding: 40px 15px !important;
+    }
+    h1 { font-size: 28px !important; }
+    h2 { font-size: 24px !important; }
+    h3 { font-size: 20px !important; }
+    p { font-size: 16px !important; }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .cta-btn {
+        min-height: 44px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* 4. Featured Listings Section */
+    .feature-cards {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    .feature-cards .card, .card {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    .card > div:first-child > div[style*="background"] {
+        height: 200px !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
+    /* 5. Footer */
+    .footer, .site-footer {
+        padding: 30px 15px !important;
+    }
+    .footer-container {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    .footer-col {
+        text-align: center !important;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .footer-col div[style*="display: flex"] {
+        justify-content: center !important;
+    }
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    .social-icons a {
+        width: 40px !important;
+        height: 40px !important;
+        line-height: 40px !important;
+        margin: 0 !important;
+    }
+    
+    /* Extra Inner Pages */
+    .inner-page {
+        padding: 100px 15px 40px !important;
+    }
+    .kagaz-container {
+        flex-direction: column;
+        gap: 30px;
     }
 }
 

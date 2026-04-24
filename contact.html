@@ -17,25 +17,30 @@
 </head>
 <body>
 
-    <header style="background: #1e40af; width: 100%; box-sizing: border-box; padding: 0;">
-      <div style="display: flex; align-items: center; padding: 10px 24px; justify-content: space-between; width: 100%;">
+    <header class="site-header">
+      <div class="header-container">
         
         <!-- Left: Logo + Name -->
         <div style="display: flex; align-items: center; gap: 14px;">
-          <div style="background: #ffffff; width: 48px; height: 48px; border-radius: 6px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <div class="logo-box" style="background: #ffffff; width: 48px; height: 48px; border-radius: 6px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
             <img 
               src="Verified-property/images/logo-new.png" 
               alt="Verified Property Logo" 
               style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.3) translateY(2px);"
             >
           </div>
-          <span style="color: #fff; font-size: 24px; font-weight: 700; white-space: nowrap;">
+          <span class="logo-text" style="color: #fff; font-size: 24px; font-weight: 700; white-space: nowrap;">
             Verified Property
           </span>
         </div>
 
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
         <!-- Right: Menu -->
-        <nav style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; align-items: center;">
+        <nav class="nav-menu">
           <a href="index.html" style="color: #fff; text-decoration: none; font-size: 16px; font-weight: 500;">Home</a>
           
           <div class="dropdown">
@@ -133,5 +138,11 @@
             <p>© 2026 Verified Property Lucknow. All Rights Reserved. | RERA No: UPRERAPRJ12345</p>
         </div>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

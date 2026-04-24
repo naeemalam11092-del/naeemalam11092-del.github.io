@@ -17,26 +17,31 @@
 </head>
 <body>
 
-    <header style="background: #1e40af; width: 100%; box-sizing: border-box; padding: 0;">
-      <div style="display: flex; align-items: center; padding: 10px 24px; justify-content: space-between; width: 100%;">
+    <header class="site-header">
+      <div class="header-container">
         
         <!-- Left: Logo + Name -->
         <div style="display: flex; align-items: center; gap: 14px;">
           <!-- White box ka size fix kiya aur image ko scale (zoom) kar diya -->
-          <div style="background: #ffffff; width: 48px; height: 48px; border-radius: 6px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <div class="logo-box" style="background: #ffffff; width: 48px; height: 48px; border-radius: 6px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
             <img 
               src="Verified-property/images/logo-new.png" 
               alt="" 
               style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.3) translateY(2px);"
             >
           </div>
-          <span style="color: #fff; font-size: 24px; font-weight: 700; white-space: nowrap;">
+          <span class="logo-text" style="color: #fff; font-size: 24px; font-weight: 700; white-space: nowrap;">
             Verified Property
           </span>
         </div>
 
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
         <!-- Right: Menu -->
-        <nav style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; align-items: center;">
+        <nav class="nav-menu">
           <a href="index.html" style="color: #fff; text-decoration: none; font-size: 16px; font-weight: 500;">Home</a>
           
           <div class="dropdown">
@@ -249,5 +254,10 @@
         <svg viewBox="0 0 24 24" width="35" height="35" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.852c1.856.595 3.597.883 5.184.883 5.455 0 9.894-4.439 9.894-9.895 0-2.643-1.029-5.128-2.9-6.998-1.87-1.87-4.355-2.9-6.993-2.9-5.455 0-9.894 4.439-9.894 9.895 0 1.742.454 3.435 1.311 4.905l-.995 3.636 3.734-.974zm12.035-5.391c-.099-.164-.364-.262-.763-.462s-2.355-1.161-2.719-1.293c-.365-.133-.63-.199-.896.199s-1.028 1.293-1.261 1.558-.465.299-.864.099c-.399-.199-1.684-.621-3.208-1.981-1.185-1.057-1.984-2.363-2.217-2.761-.232-.399-.025-.614.175-.812.18-.178.399-.465.599-.697.198-.233.263-.398.397-.663.134-.266.067-.498-.033-.697s-.896-2.158-1.229-2.961c-.324-.783-.653-.675-.896-.688-.232-.013-.5-.015-.765-.015s-.697.099-1.063.498c-.366.399-1.395 1.361-1.395 3.321s1.428 3.85 1.628 4.115c.199.266 2.811 4.292 6.81 6.015 4.0 1.723 4.0 1.149 4.731 1.082.731-.066 2.355-.963 2.687-1.893.333-.93.333-1.727.233-1.891z"/></svg>
     </a>
 
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
