@@ -48,7 +48,7 @@ function openVideoPopup(videoId) {
     
     // Create YouTube iFrame
     const iframe = document.createElement('iframe');
-    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&mute=1&modestbranding=1&playsinline=1`;
     iframe.style.width = '90%';
     iframe.style.maxWidth = '800px';
     iframe.style.aspectRatio = '16/9';
