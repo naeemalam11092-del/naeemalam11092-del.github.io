@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Verified Property Lucknow</title>
+    <title>Our Projects | Verified Property Lucknow</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -14,6 +14,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <!-- Added Tailwind CSS via CDN with preflight disabled to prevent breaking existing styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { corePlugins: { preflight: false } }
+    </script>
 </head>
 <body>
 
@@ -67,33 +72,53 @@
     </header>
 
     <section class="inner-page">
-        <h1>About Verified Property</h1>
-        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 1.1rem; margin-bottom: 20px;">We are Lucknow's trusted LDA & RERA approved plot provider since 2015. We have fulfilled the dream of a home for 500+ families.</p>
+        <h1>Our Current Projects</h1>
+        
+        <!-- YouTube Shorts Video Section -->
+        <div class="max-w-[400px] w-full mx-auto mb-16 px-4 flex flex-col items-center text-center">
+            <h2 class="text-[var(--color-primary)] text-2xl md:text-3xl font-bold mb-6 font-['Outfit']">Discover Verified Property Lucknow in 45 Seconds</h2>
             
-            <h2 style="color: var(--color-primary); margin: 50px 0 20px;">Why Choose Us</h2>
-            <div class="feature-cards" style="margin-top: 0;">
-                <div class="card" style="width: 200px; padding: 20px;">
-                    <div class="card-icon" style="width: 45px; height: 45px; margin-bottom: 10px;"><i class="fas fa-file-contract" style="font-size: 20px;"></i></div>
-                    <p style="font-weight: bold; margin: 0; color: var(--color-primary);">✅ 100% Legal Papers</p>
-                </div>
-                <div class="card" style="width: 200px; padding: 20px;">
-                    <div class="card-icon" style="width: 45px; height: 45px; margin-bottom: 10px;"><i class="fas fa-road" style="font-size: 20px;"></i></div>
-                    <p style="font-weight: bold; margin: 0; color: var(--color-primary);">✅ On-Road Location</p>
-                </div>
-                <div class="card" style="width: 200px; padding: 20px;">
-                    <div class="card-icon" style="width: 45px; height: 45px; margin-bottom: 10px;"><i class="fas fa-tags" style="font-size: 20px;"></i></div>
-                    <p style="font-weight: bold; margin: 0; color: var(--color-primary);">✅ No Hidden Charges</p>
-                </div>
-                <div class="card" style="width: 200px; padding: 20px;">
-                    <div class="card-icon" style="width: 45px; height: 45px; margin-bottom: 10px;"><i class="fas fa-gavel" style="font-size: 20px;"></i></div>
-                    <p style="font-weight: bold; margin: 0; color: var(--color-primary);">✅ Expert Legal Team</p>
+            <div class="w-full aspect-[9/16] rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.15)] border-2 border-gray-200 mb-6 relative bg-gray-100">
+                <iframe 
+                    class="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/SmOyLwVXW2I" 
+                    title="Verified Property Lucknow - Company Intro" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+            
+            <a href="https://youtube.com/@VerifiedPropertylucknow" target="_blank" class="w-full flex items-center justify-center gap-3 bg-[#FF0000] text-white font-bold py-4 px-6 rounded-full shadow-[0_10px_30px_rgba(255,0,0,0.3)] hover:bg-[#CC0000] hover:scale-105 hover:-translate-y-1 transition-all duration-300 no-underline text-lg font-['Sora']">
+                <i class="fab fa-youtube text-2xl"></i> Visit Our YouTube Channel
+            </a>
+        </div>
+
+        <div class="feature-cards">
+            <div class="card" style="padding: 0; overflow: hidden; width: 350px;">
+                <div style="background: #e0e0e0; height: 220px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #666;">[Image Placeholder 400x250]</div>
+                <div style="padding: 25px;">
+                    <h3 style="color: var(--color-primary); margin-bottom: 10px; font-size: 1.5rem;">Sushant Golf City</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 25px;">Location: Shaheed Path | Size: 1000-2000 Sq.Ft | LDA Approved</p>
+                    <a href="https://wa.me/7017446267?text=Hello,%20I%20am%20interested%20in%20Sushant%20Golf%20City%20project." class="cta-btn" style="font-size: 1rem; padding: 12px; justify-content: center; width: 100%;">Get Details on WhatsApp</a>
                 </div>
             </div>
-
-            <div style="margin-top: 50px; background: #e0e0e0; height: 350px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 12px; border: 2px dashed #ccc; font-size: 1.5rem; font-weight: 700; color: #666;">
-                <span>[Team Photo Placeholder]</span>
-                <span style="font-size: 1.2rem; color: var(--color-primary); margin-top: 10px;">10+ Years Experience</span>
+            <div class="card" style="padding: 0; overflow: hidden; width: 350px;">
+                <div style="background: #e0e0e0; height: 220px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #666;">[Image Placeholder 400x250]</div>
+                <div style="padding: 25px;">
+                    <h3 style="color: var(--color-primary); margin-bottom: 10px; font-size: 1.5rem;">Gomti Nagar Extension</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 25px;">Location: Gomti Nagar | Size: 1000-2000 Sq.Ft | LDA Approved</p>
+                    <a href="https://wa.me/7017446267?text=Hello,%20I%20am%20interested%20in%20Gomti%20Nagar%20Extension%20project." class="cta-btn" style="font-size: 1rem; padding: 12px; justify-content: center; width: 100%;">Get Details on WhatsApp</a>
+                </div>
+            </div>
+            <div class="card" style="padding: 0; overflow: hidden; width: 350px;">
+                <div style="background: #e0e0e0; height: 220px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #666;">[Image Placeholder 400x250]</div>
+                <div style="padding: 25px;">
+                    <h3 style="color: var(--color-primary); margin-bottom: 10px; font-size: 1.5rem;">Vrindavan Yojna</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 25px;">Location: Raebareli Road | Size: 1000-2000 Sq.Ft | LDA Approved</p>
+                    <a href="https://wa.me/7017446267?text=Hello,%20I%20am%20interested%20in%20Vrindavan%20Yojna%20project." class="cta-btn" style="font-size: 1rem; padding: 12px; justify-content: center; width: 100%;">Get Details on WhatsApp</a>
+                </div>
             </div>
         </div>
     </section>

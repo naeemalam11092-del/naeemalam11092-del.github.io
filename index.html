@@ -1,234 +1,585 @@
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
-  <title>Hathi Day 2 - PhD</title>
-  <style>
-    body {
-      font-family: Arial;
-      padding: 20px;
-      background: #f0f0f0;
-    }
-    .maha-dibba {
-      background: white;
-      padding: 20px 50px; /* Kal wala yaad hai na */
-      border: 3px solid orange; /* Hathi ka rang */
-      border-radius: 50px;
-      box-shadow: 0 0 20px gray;
-      color: rgb(45, 10, 174);
-      margin: 20px auto;
-      max-width: 100%;
-    }
-    .hero-text {
-  font-size: 50px; /* Naam bada kar */
-  color: rgb(202, 54, 56); /* Hathi ka rang */
-  text-align: center; /* Beech me kar */
-  margin: 0; /* Upar neeche jagah khatam */
-  text-shadow: 2px 2px 5px gray; /* Naam ke peeche halki parchhai */
-  letter-spacing: 3px; /* Akshar ke beech hawa */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verified Property Lucknow | LDA Approved Plots</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --color-primary: #1A4D8F;    /* Royal Blue - Trust, Main Brand */
+            --color-secondary: #00A651;  /* Growth Green - CTA, Success */
+            --color-white: #FFFFFF;      /* Pure White - Text, Clean */
+            --color-dark: #1A1A1A;       /* Off-Black - Body text */
+            --color-light-bg: #F5F9FF;   /* Light Blue tint - Section BG */
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Sora', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-body);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 400;
+            line-height: 1.6;
+            background-color: var(--color-white);
+            color: var(--color-dark);
+        }
+
+        h1, h2, h3, h4, h5, h6, .logo {
+            font-family: var(--font-heading) !important;
+            font-weight: 700;
+        }
+
+        p, a, li, button {
+            font-family: var(--font-body);
+        }
+
+        /* --- Header --- */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            min-height: 60px;
+            background: var(--color-primary);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--color-secondary);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--color-white);
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+        }
+
+        .logo-text-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--color-white);
+        }
+
+        .nav-links a {
+            color: var(--color-white);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-secondary);
+        }
+
+        /* --- Dropdown Menu --- */
+        .dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--color-white);
+            min-width: 160px;
+            box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.15);
+            z-index: 1001;
+            border-radius: 8px;
+            overflow: hidden;
+            top: 100%;
+            left: 0;
+            border: 1px solid #eee;
+        }
+        .dropdown-content a {
+            color: var(--color-primary) !important;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 15px;
+            font-weight: 600;
+            border-bottom: 1px solid #f5f5f5;
+            transition: 0.3s;
+        }
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+        .dropdown-content a:hover {
+            background-color: var(--color-light-bg);
+            color: var(--color-secondary) !important;
+            padding-left: 20px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            color: var(--color-secondary) !important;
+        }
+
+        /* --- Hero Section --- */
+.hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('verified-property/images/rumi-gate.jpg') !important;
+            background-size: cover !important;
+            background-position: center 80% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-white);
+    padding: 80px 20px;
 }
 
-.hero-sub {
-  font-size: 20px;
-  color: #2b0bce;
-  text-align: center;
-  line-height: 1.5; /* Line ke beech saans lene ki jagah */
-  margin-top: 10px;
-}
+        .hero h1 {
+            font-family: var(--font-heading) !important; 
+            font-size: 4rem !important; 
+            font-weight: 900 !important; 
+            letter-spacing: -2px !important;
+            margin-bottom: 10px;
+            color: var(--color-white);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Heading bhi chamke */
+        }
 
-.hero-date {
-  font-size: 14px;
-  color: green;
-  text-align: center;
-  font-weight: bold;
-}
-.section-title {
-  text-align: center;
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-.phd-form {
-  margin-top: 20px;
-}
-.phd-form label {
-  display: block;
-  margin-top: 15px;
-  font-weight: bold;
-  color: #333;
-}
-.phd-form input {
-  width: 100%;
-  padding: 12px; /* Ye hai padding = andar ki saans */
-  margin-top: 5px;
-  border: 2px solid #ccc;
-  border-radius: 8px; /* Kone gol */
-  box-sizing: border-box; /* Padding se dabba na phate */
-  font-size: 16px;
-}
-.phd-form input:focus {
-  border: 2px solid orange; /* Click kare to Hathi ka rang */
-  outline: none;
-  box-shadow: 0 0 10px orange; /* Chamkega */
-}
-.phd-form button {
-  width: 100%;
-  padding: 15px;
-  margin-top: 20px;
-  background: orange;
-  color: white;
-  border: none;
-  border-radius: 100px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.phd-form button:hover {
-  background: #e69500; /* Pehle orange tha, ab gaadha narangi */
-  box-shadow: 0 5px 15px rgba(255,165,0,0.4);
-}
-.phd-form button:focus {
-  outline: none; /* Neeli line bhaga di */
-}
-.phd-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  margin-top: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 30px;
-  overflow: hidden;
-}
-.phd-table th, .phd-table td {
-  border: 1px solid #ddd;
-  padding: 12px 15px;
-  text-align: left;
-  color: #333;
-}
-.phd-table th {
-  background-color: orange;
-  color: white;
-  font-size: 18px;
-}
-.phd-table th:first-child { border-top-left-radius: 8px; }
-.phd-table th:last-child { border-top-right-radius: 8px; }
-.phd-table tr:last-child td:first-child { border-bottom-left-radius: 8px; }
-.phd-table tr:last-child td:last-child { border-bottom-right-radius: 8px; }
-.phd-table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-.phd-table tr:hover {
-  background-color: #fff3e0;
-}
-.photo-jodi {
-  position: relative; /* Ye Baap hai, iske hisaab se beta chalega */
-  margin-top: 20px;
-}
+        .green-text {
+            color: var(--color-secondary);
+        }
 
-.hero-img {
-  width: 100%;
-  aspect-ratio: 16 / 4;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  display: block; /* Zaroori hai */
-}
+        .trust-points-compact {
+            background: rgba(255, 255, 255, 0.15); /* Transparent white */
+            backdrop-filter: blur(12px); /* This creates glass blur */
+            -webkit-backdrop-filter: blur(12px); /* For Safari */
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Glass edge */
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin: 25px auto;
+            max-width: 600px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2); /* Depth shadow */
+        }
 
-.dp-img {
-  width: 120px; 
-  height: 120px;
-  border-radius: 50%; /* Gol */
-  object-fit: cover;
-  border: 4px solid white; /* Safed border zyada achha lagta overlap me */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Parchhai = 3D lagega */
-  
-  /* YE 3 LINE JAADU HAI */
-  position: absolute; /* Baap ke upar udne ki permission */
-  bottom: -60px; /* Neeche se 60px bahar nikal de = Aadhi bahar */
-  left: 50%; /* Baap ke beech me le aa */
-  transform: translateX(-50%); /* Ek dum perfect center */
-}
-  </style>
+        .trust-points-compact p {
+            color: #FFFFFF;
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 10px 0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Text pop on glass */
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .cta-btn {
+            background-color: var(--color-secondary);
+            color: var(--color-white);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 2px solid var(--color-white);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            transition: 0.3s transform ease, 0.3s box-shadow ease, 0.3s background-color ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+            background-color: var(--color-primary);
+        }
+
+        .cta-btn svg {
+            width: 25px;
+            height: 25px;
+            fill: white;
+        }
+
+        /* --- Features Section --- */
+        .features {
+            padding: 80px 10%;
+            background-color: var(--color-light-bg);
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: 0.4s;
+            border-top: 5px solid var(--color-secondary);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 45px rgba(26, 77, 46, 0.1);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .feature-icon svg {
+            width: 35px;
+            fill: var(--color-secondary);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: var(--color-dark);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            text-align: left;
+            padding: 25px 20px;
+            border-top: 4px solid var(--color-secondary);
+            font-size: 14px;
+        }
+
+        footer p {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+            .nav-links {
+                display: none;
+            }
+            .hero {
+                background-attachment: scroll;
+            }
+            .hero h1 {
+                margin-top: 50px;
+            }
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--color-secondary);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
 
-  <div class="maha-dibba">
-    <h1>Naeem Ki PhD Lab 🔬</h1>
-    <p>Text, Form, Table, Image - Sabka ilaaj yahan hoga</p>
-    
-    <!-- YAHAN GHANTA 1 KAAM HOGA: TEXT -->
-     <!-- GHANTA 1: TEXT KI PHD -->
-<h1 class="hero-text">Naeem</h1>
-<p class="hero-sub">Future Software Engineer @ 6 LPA 💰</p>
-<p class="hero-date">Mission Start: 10 April 2026 | Target: 11 June 2026 🎯</p>
-<!-- GHANTA 2: FORM KI PHD -->
-<hr style="margin: 30px 0; border: 3px dashed rgb(66, 218, 74);">
-<h2 class="section-title">Contact Mahavat 📞</h2>
-<form class="phd-form">
-  <label for="name">Naam Batao:</label>
-  <input type="text" id="name" placeholder="Naeem">
-  
-  <label for="email">Email Daalo:</label>
-  <input type="email" id="email" placeholder="hathi@6lpa.com">
-  
-  <button type="submit">Hathi Ko Bhejo 🚀</button>
-</form>
-<!-- GHANTA 3: TABLE KI PHD -->
-<hr style="margin: 30px 0; border: 1px dashed orange;">
-<h2 class="section-title">Mahavat Ki Marksheet 📊</h2>
-<table class="phd-table">
-  <tr>
-    <th>Skill</th>
-    <th>Level</th>
-    <th>Status</th>
-  </tr>
-  <tr>
-    <td>HTML</td>
-    <td>Pro</td>
-    <td>✅ Done</td>
-  </tr>
-  <tr>
-    <td>CSS</td>
-    <td>Pro</td>
-    <td>✅ Done</td>
-  </tr>
-  <tr>
-    <td>Debugging</td>
-    <td>Senior</td>
-    <td>✅ Bug Mara</td>
-  </tr>
-  <tr>
-    <td>GitHub</td>
-    <td>pro</td>
-    <td>⏳ Push Mara</td>
-  </tr>
-  <tr>
-    <td>6 LPA Job</td>
-    <td>Loading...</td>
-    <td>🎯 11 June</td>
-  </tr>
-</table>
-<!-- GHANTA 4: IMAGE KI PHD - AAKHRI KAAM -->
-<hr style="margin: 30px 0; border: 1px dashed orange;">
-<h2 class="section-title">Mahavat + Hathi Ki Photo 📸</h2>
+    <header style="background: #1e40af; width: 100%; box-sizing: border-box; padding: 0;">
+      <div style="display: flex; align-items: center; padding: 10px 24px; justify-content: space-between; width: 100%;">
+        
+        <!-- Left: Logo + Name -->
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <!-- White box ka size fix kiya aur image ko scale (zoom) kar diya -->
+          <div style="background: #ffffff; width: 48px; height: 48px; border-radius: 6px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img 
+              src="Verified-property/images/logo-new.png" 
+              alt="" 
+              style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.3) translateY(2px);"
+            >
+          </div>
+          <span style="color: #fff; font-size: 24px; font-weight: 700; white-space: nowrap;">
+            Verified Property
+          </span>
+        </div>
 
-<!-- 16:9 Wali Badi Image = Website ka Banner -->
-<div class="photo-jodi">
-    <!-- 16:9 Wali Badi Image -->
-    <img 
-      class="hero-img" 
-      src="https://static.vecteezy.com/system/resources/thumbnails/054/790/173/small/heartwarming-moment-of-elephant-splashing-water-in-river-glowing-natural-light-creates-joyful-and-serene-scene-perfect-for-world-animal-day-photo.jpg" 
-      
-    
-    <!-- Gol DP Wali Chhoti Image -->
-    <img 
-      class="dp-img" 
-      src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=400" 
-      alt="Hathi ki gol DP">
-</div>
-    
-  </div>
+        <!-- Right: Menu -->
+        <nav style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; align-items: center;">
+          <a href="index.html" style="color: #fff; text-decoration: none; font-size: 16px; font-weight: 500;">Home</a>
+          
+          <div class="dropdown">
+            <span class="dropbtn" style="color: #fff; font-size: 16px; font-weight: 500; cursor: pointer; transition: 0.3s;">LDA <i class="fas fa-chevron-down" style="font-size: 12px; margin-left: 4px;"></i></span>
+            <div class="dropdown-content">
+              <a href="lda-plots.html">Plots</a>
+              <a href="lda-houses.html">House/Villa</a>
+              <a href="lda-flats.html">Flats</a>
+              <a href="lda-commercial.html">Commercial Properties</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <span class="dropbtn" style="color: #fff; font-size: 16px; font-weight: 500; cursor: pointer; transition: 0.3s;">Freehold <i class="fas fa-chevron-down" style="font-size: 12px; margin-left: 4px;"></i></span>
+            <div class="dropdown-content">
+              <a href="freehold-plots.html">Plots</a>
+              <a href="freehold-houses.html">House/Villa</a>
+              <a href="freehold-flats.html">Flats</a>
+              <a href="freehold-commercial.html">Commercial Properties</a>
+            </div>
+          </div>
+          <a href="about.html" style="color: #fff; text-decoration: none; font-size: 16px; font-weight: 500;">About</a>
+          <a href="legal.html" style="color: #fff; text-decoration: none; font-size: 16px; font-weight: 500;">Legal</a>
+          <a href="contact.html" style="color: #fff; text-decoration: none; font-size: 16px; font-weight: 500;">Contact</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-5FN8u4LjFddspsTeg0GSma86TEt2_xY3VROlmwhMjWygrQ/viewform" target="_blank" class="header-cta"><i class="fas fa-plus-circle"></i> List your property</a>
+        </nav>
+
+      </div>
+    </header>
+
+    <section class="hero">
+        <h1>LDA Plots <span class="green-text">100% Verified</span></h1>
+        <a href="https://wa.me/7017446267?text=Hello,%20I%20am%20interested%20in%20LDA%20plots." class="cta-btn">
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.852c1.856.595 3.597.883 5.184.883 5.455 0 9.894-4.439 9.894-9.895 0-2.643-1.029-5.128-2.9-6.998-1.87-1.87-4.355-2.9-6.993-2.9-5.455 0-9.894 4.439-9.894 9.895 0 1.742.454 3.435 1.311 4.905l-.995 3.636 3.734-.974zm12.035-5.391c-.099-.164-.364-.262-.763-.462s-2.355-1.161-2.719-1.293c-.365-.133-.63-.199-.896.199s-1.028 1.293-1.261 1.558-.465.299-.864.099c-.399-.199-1.684-.621-3.208-1.981-1.185-1.057-1.984-2.363-2.217-2.761-.232-.399-.025-.614.175-.812.18-.178.399-.465.599-.697.198-.233.263-.398.397-.663.134-.266.067-.498-.033-.697s-.896-2.158-1.229-2.961c-.324-.783-.653-.675-.896-.688-.232-.013-.5-.015-.765-.015s-.697.099-1.063.498c-.366.399-1.395 1.361-1.395 3.321s1.428 3.85 1.628 4.115c.199.266 2.811 4.292 6.81 6.015 4.0 1.723 4.0 1.149 4.731 1.082.731-.066 2.355-.963 2.687-1.893.333-.93.333-1.727.233-1.891z"/></svg>
+            WhatsApp Us
+        </a>
+    </section>
+
+    <!-- Featured Listings Section -->
+    <section style="padding: 80px 5%; background-color: var(--color-white); text-align: center;">
+        <h2 style="font-size: 2.8rem; color: var(--color-primary); margin-bottom: 10px;">Featured <span style="color: var(--color-secondary);">Listings</span></h2>
+        <p style="font-size: 1.1rem; color: #555; margin-bottom: 50px;">Handpicked Premium Properties in Top Locations of Lucknow</p>
+        
+        <div class="feature-cards" style="max-width: 1300px; margin: 0 auto; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            
+            <!-- Property Card 1 -->
+            <div class="card" style="padding: 0; overflow: hidden; width: 300px; text-align: left;">
+                <div style="position: relative;">
+                    <div style="background: url('https://placehold.co/400x250/1e40af/ffffff?text=Luxury+Villa') center/cover; height: 220px;"></div>
+                    <span style="position: absolute; top: 15px; left: 15px; background: var(--color-secondary); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">Ready to Move</span>
+                </div>
+                <div style="padding: 25px;">
+                    <h3 style="color: var(--color-primary); margin-bottom: 10px; font-size: 1.4rem;">3 BHK Premium Villa</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 10px; color: #555;"><i class="fas fa-map-marker-alt" style="color: var(--color-gold); margin-right: 8px;"></i>Vrindavan Yojna</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px; color: #555;"><i class="fas fa-bed" style="color: var(--color-gold); margin-right: 8px;"></i>3 BHK | 1800 Sq.Ft</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 15px; margin-bottom: 20px;">
+                        <span style="font-weight: 700; color: var(--color-dark); font-size: 1.2rem;">₹ 85 Lakhs</span>
+                        <span style="color: var(--color-secondary); font-size: 0.9rem; font-weight: bold;">LDA Approved</span>
+                    </div>
+                    <a href="https://wa.me/7017446267?text=Hi,%20I%20want%20details%20for%203BHK%20Villa%20in%20Vrindavan%20Yojna" class="cta-btn" style="font-size: 1rem; padding: 12px; justify-content: center; width: 100%; border-radius: 8px; box-shadow: none;"><i class="fab fa-whatsapp"></i> Get Details</a>
+                </div>
+            </div>
+            
+            <!-- Property Card 2 -->
+            <div class="card" style="padding: 0; overflow: hidden; width: 300px; text-align: left;">
+                <div style="position: relative;">
+                    <div style="background: url('https://placehold.co/400x250/1e40af/ffffff?text=Corner+Plot') center/cover; height: 220px;"></div>
+                    <span style="position: absolute; top: 15px; left: 15px; background: #E63946; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">Hot Property</span>
+                </div>
+                <div style="padding: 25px;">
+                    <h3 style="color: var(--color-primary); margin-bottom: 10px; font-size: 1.4rem;">Gomti Nagar Ext. Plot</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 10px; color: #555;"><i class="fas fa-map-marker-alt" style="color: var(--color-gold); margin-right: 8px;"></i>Gomti Nagar Ext.</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px; color: #555;"><i class="fas fa-ruler-combined" style="color: var(--color-gold); margin-right: 8px;"></i>1200 Sq.Ft.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 15px; margin-bottom: 20px;">
+                        <span style="font-weight: 700; color: var(--color-dark); font-size: 1.2rem;">₹ 5,200<span style="font-size: 0.8rem; color: #888;">/sq.ft</span></span>
+                        <span style="color: var(--color-secondary); font-size: 0.9rem; font-weight: bold;">Immediate Reg.</span>
+                    </div>
+                    <a href="https://wa.me/7017446267?text=Hi,%20I%20want%20details%20for%20Gomti%20Nagar%20Plot" class="cta-btn" style="font-size: 1rem; padding: 12px; justify-content: center; width: 100%; border-radius: 8px; box-shadow: none;"><i class="fab fa-whatsapp"></i> Get Details</a>
+                </div>
+            </div>
+
+            <!-- Property Card 3 -->
+            <div class="card" style="padding: 0; overflow: hidden; width: 300px; text-align: left;">
+                <div style="position: relative;">
+                    <div style="background: url('https://placehold.co/400x250/1e40af/ffffff?text=Highway+Plot') center/cover; height: 220px;"></div>
+                    <span style="position: absolute; top: 15px; left: 15px; background: var(--color-gold); color: var(--color-primary); padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">Investment</span>
+                </div>
+                <div style="padding: 25px;">
+                    <h3 style="color: var(--color-primary); margin-bottom: 10px; font-size: 1.4rem;">Kisan Path Highway</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 10px; color: #555;"><i class="fas fa-map-marker-alt" style="color: var(--color-gold); margin-right: 8px;"></i>Kisan Path, Lucknow</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px; color: #555;"><i class="fas fa-ruler-combined" style="color: var(--color-gold); margin-right: 8px;"></i>1000 - 2000 Sq.Ft.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 15px; margin-bottom: 20px;">
+                        <span style="font-weight: 700; color: var(--color-dark); font-size: 1.2rem;">₹ 1,500<span style="font-size: 0.8rem; color: #888;">/sq.ft</span></span>
+                        <span style="color: var(--color-secondary); font-size: 0.9rem; font-weight: bold;">Freehold</span>
+                    </div>
+                    <a href="https://wa.me/7017446267?text=Hi,%20I%20want%20details%20for%20Kisan%20Path%20Plot" class="cta-btn" style="font-size: 1rem; padding: 12px; justify-content: center; width: 100%; border-radius: 8px; box-shadow: none;"><i class="fab fa-whatsapp"></i> Get Details</a>
+                </div>
+            </div>
+
+            <!-- Property Card 4 -->
+            <div class="card" style="padding: 0; overflow: hidden; width: 300px; text-align: left;">
+                <div style="position: relative;">
+                    <div style="background: url('https://placehold.co/400x250/1e40af/ffffff?text=Luxury+Flat') center/cover; height: 220px;"></div>
+                    <span style="position: absolute; top: 15px; left: 15px; background: var(--color-primary); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">Furnished</span>
+                </div>
+                <div style="padding: 25px;">
+                    <h3 style="color: var(--color-primary); margin-bottom: 10px; font-size: 1.4rem;">2 BHK Luxury Flat</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 10px; color: #555;"><i class="fas fa-map-marker-alt" style="color: var(--color-gold); margin-right: 8px;"></i>Gomti Nagar</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px; color: #555;"><i class="fas fa-bed" style="color: var(--color-gold); margin-right: 8px;"></i>2 BHK | 1200 Sq.Ft</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 15px; margin-bottom: 20px;">
+                        <span style="font-weight: 700; color: var(--color-dark); font-size: 1.2rem;">₹ 75 Lakhs</span>
+                        <span style="color: var(--color-secondary); font-size: 0.9rem; font-weight: bold;">Prime Loc</span>
+                    </div>
+                    <a href="https://wa.me/7017446267?text=Hi,%20I%20want%20details%20for%202BHK%20Flat" class="cta-btn" style="font-size: 1rem; padding: 12px; justify-content: center; width: 100%; border-radius: 8px; box-shadow: none;"><i class="fab fa-whatsapp"></i> Get Details</a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div style="margin-top: 50px;">
+            <a href="lda-plots.html" class="cta-btn" style="display: inline-flex; width: auto; padding: 16px 40px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-radius: 50px; font-size: 1.1rem; background: var(--color-primary); border: none;">Explore All Properties <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+        </div>
+    </section>
+
+    <section class="kagaz-check-section">
+        <div class="kagaz-container">
+            <div class="kagaz-left">
+                <h2>5-Point Legal Verification Report</h2>
+                <p class="kagaz-subtext">Comprehensive legal verification report for every property.</p>
+                
+                <div class="check-list">
+                    <div class="check-item">
+                        <span><i class="fas fa-check-circle"></i> 143 Certificate</span>
+                        <span class="status">Verified</span>
+                    </div>
+                    <div class="check-item">
+                        <span><i class="fas fa-check-circle"></i> Registry Check</span>
+                        <span class="status">Clear</span>
+                    </div>
+                    <div class="check-item">
+                        <span><i class="fas fa-check-circle"></i> NOC</span>
+                        <span class="status">Verified</span>
+                    </div>
+                    <div class="check-item">
+                        <span><i class="fas fa-check-circle"></i> Allotment Letter</span>
+                        <span class="status">Authentic</span>
+                    </div>
+                    <div class="check-item">
+                        <span><i class="fas fa-check-circle"></i> Tax Receipt</span>
+                        <span class="status">Up to Date</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="kagaz-right">
+                <img src="https://placehold.co/600x450/1A4D8F/D4AF37?text=RERA+Approved+Legal+Documents" alt="Legal Documents">
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+                    <div style="background: #ffffff; width: 48px; height: 48px; border-radius: 6px; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0;">
+                        <img 
+                          src="Verified-property/images/logo-new.png" 
+                          alt="Verified Property Logo" 
+                          style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.3) translateY(2px);"
+                        >
+                    </div>
+                    <h3 style="color: var(--color-gold); font-size: 1.4rem; font-weight: 800; margin: 0; text-align: left;">
+                        Verified Property
+                    </h3>
+                </div>
+                <p>Lucknow's most trusted real estate partner. We provide 100% legal, LDA & RERA approved plots in top locations to make your dream home a reality.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@VerifiedPropertylucknow" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="legal.html">Legal Docs</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i> Gomti Nagar, Lucknow, UP</li>
+                    <li><i class="fas fa-phone"></i> +91-XXXXXXXXXX</li>
+                    <li><i class="fas fa-envelope"></i> info@verifiedproperty.in</li>
+                    <li><i class="fab fa-whatsapp"></i> WhatsApp: +91-XXXXXXXXXX</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Verified Property Lucknow. All Rights Reserved. | RERA No: UPRERAPRJ12345</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/7017446267?text=Hello,%20I%20am%20interested%20in%20Verified%20Property." class="whatsapp-float">
+        <svg viewBox="0 0 24 24" width="35" height="35" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.852c1.856.595 3.597.883 5.184.883 5.455 0 9.894-4.439 9.894-9.895 0-2.643-1.029-5.128-2.9-6.998-1.87-1.87-4.355-2.9-6.993-2.9-5.455 0-9.894 4.439-9.894 9.895 0 1.742.454 3.435 1.311 4.905l-.995 3.636 3.734-.974zm12.035-5.391c-.099-.164-.364-.262-.763-.462s-2.355-1.161-2.719-1.293c-.365-.133-.63-.199-.896.199s-1.028 1.293-1.261 1.558-.465.299-.864.099c-.399-.199-1.684-.621-3.208-1.981-1.185-1.057-1.984-2.363-2.217-2.761-.232-.399-.025-.614.175-.812.18-.178.399-.465.599-.697.198-.233.263-.398.397-.663.134-.266.067-.498-.033-.697s-.896-2.158-1.229-2.961c-.324-.783-.653-.675-.896-.688-.232-.013-.5-.015-.765-.015s-.697.099-1.063.498c-.366.399-1.395 1.361-1.395 3.321s1.428 3.85 1.628 4.115c.199.266 2.811 4.292 6.81 6.015 4.0 1.723 4.0 1.149 4.731 1.082.731-.066 2.355-.963 2.687-1.893.333-.93.333-1.727.233-1.891z"/></svg>
+    </a>
 
 </body>
 </html>
-
-<!-- NAYA DIBBA: Dono photo iske andar -->
