@@ -1106,7 +1106,7 @@ header {
     border-radius: 16px;
     border: 1px solid #0d47a1;
     box-shadow: 0 4px 15px rgba(26,35,126,0.3);
-    padding: 20px 15px;
+    padding: 25px 15px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1114,21 +1114,21 @@ header {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
-.category-icon {
-    width: 80px;
-    height: 80px;
+.category-card img {
+    width: 100px;
+    height: 100px;
     margin-bottom: 15px;
     object-fit: contain;
     background: white; /* White background behind icon */
-    padding: 12px; /* Space around glossy icon */
-    border-radius: 16px; /* Rounded white box */
+    padding: 8px; /* Space around glossy icon */
+    border-radius: 20px; /* Rounded white box */
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 .category-card h3 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     color: white; /* Change text to white for blue background */
-    margin: 0 0 15px 0;
+    margin: 5px 0 15px 0;
 }
 .category-btn {
     display: inline-block;
