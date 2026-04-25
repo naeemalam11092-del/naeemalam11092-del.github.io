@@ -1072,3 +1072,85 @@ header {
     background-color: #D62828 !important;
     box-shadow: 0 15px 40px rgba(230, 57, 70, 0.5) !important;
 }
+
+/* --- Property Categories Grid --- */
+.property-categories {
+    padding: 60px 5%;
+    text-align: center;
+}
+.property-categories .category-header h2 {
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+.property-categories .category-header p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+.lda-category {
+    background-color: #ffffff;
+}
+.freehold-category {
+    background-color: #f8f9fa;
+}
+.category-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.category-card {
+    background: #1a237e; /* Royal Blue */
+    border-radius: 16px;
+    border: 1px solid #0d47a1;
+    box-shadow: 0 4px 15px rgba(26,35,126,0.3);
+    padding: 20px 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.category-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    object-fit: contain;
+    background: white; /* White background behind icon */
+    padding: 12px; /* Space around glossy icon */
+    border-radius: 16px; /* Rounded white box */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.category-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: white; /* Change text to white for blue background */
+    margin: 0 0 15px 0;
+}
+.category-btn {
+    display: inline-block;
+    border: 2px solid #2e7d32;
+    color: #1a1a1a;
+    background: white;
+    padding: 8px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.category-btn:hover {
+    background-color: #2e7d32;
+    color: white;
+    transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+    .category-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        max-width: 1200px;
+    }
+}
